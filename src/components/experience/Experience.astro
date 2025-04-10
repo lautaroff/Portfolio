@@ -1,0 +1,58 @@
+---
+import ExperienceCards from "./ExperienceCards.astro";
+---
+<div class="experiences" id="experience">
+    <h3 class="text-gradient" id="experience">EXPERIENCES</h3>
+    <div class="cards">
+        <ExperienceCards img="HexaLogo.png" alt="Hexadev Academy logo" title="Full-Stack developer" date="08/11/2025" description="As a Senior Software Engineer at Google, I played a pivotal role in developing innovative solutions for Google's core search algorithms. Collaborating with a dynamic team of engineers, I contributed to the enhancement of search accuracy and efficiency, optimizing user experiences for millions of users worldwide."/>
+        <ExperienceCards img="HexaLogo.png" alt="Hexadev Academy logo" title="Full-Stack developer" date="08/11/2025" description="As a Senior Software Engineer at Google, I played a pivotal role in developing innovative solutions for Google's core search algorithms. Collaborating with a dynamic team of engineers, I contributed to the enhancement of search accuracy and efficiency, optimizing user experiences for millions of users worldwide."/>
+    </div>
+</div>
+<style>
+    .experiences{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 3rem;
+    }
+    .cards{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+    }
+    .text-gradient {
+    color: #5CADFF; 
+    background-image: linear-gradient(180deg, #5CADFF 0%, #1372D1 100%); 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    font-family: 'poppins', sans-serif;
+    font-weight: bolder;
+    font-size: 45px;
+    }
+    h3{
+        font-size: 2rem;
+        color: var(--principal-text);
+        margin-bottom: 2rem;
+    }
+    @media (max-width: 768px) {
+        h3{
+            font-size: 1.5rem;
+        }
+    }
+    @media (max-width: 480px) {
+        h3{
+            font-size: 1.2rem;
+        }
+    }
+    @media (max-width: 768px) {
+        .cards{
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+</style>

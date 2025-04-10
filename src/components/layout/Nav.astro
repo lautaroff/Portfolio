@@ -1,0 +1,60 @@
+---
+---
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="#proyects">Proyects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+<style>
+
+    nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--lighter-black);
+        color: white;
+        padding: 1rem 0rem;
+        height: 30px;
+        width: 100%;
+    }
+    a {
+        color: white;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        gap: 4rem;
+    }
+    li {
+        display: inline-block;
+    }
+    @media (max-width: 768px) {
+        nav{
+            height: auto;
+            width: 100%;
+            padding: 1rem 0rem;
+        }
+        ul{
+            gap: 1rem;
+        }
+    }
+    @media (max-width: 480px) {
+        nav{
+            height: auto;
+            width: 100%;
+            padding: 1rem 0rem;
+        }
+        ul{
+            gap: 1rem;
+        }
+    }
+ </style>   

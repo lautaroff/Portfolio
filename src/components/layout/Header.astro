@@ -1,0 +1,78 @@
+---
+import Buttons from "../buttons/Buttons.astro";
+import Nav from "./Nav.astro";
+
+
+---
+<header>
+    <Nav/>
+    <img src="/lautaro_ferreyra.jpeg" alt="Foto de Lautaro Ferreyra">
+    <div class="description">
+        <h1>I do code and make content <span class="text-gradient">about it!</span></h1>
+        <p>I am a seasoned full-stack software engineer with over 8 years of professional experience, specializing in backend development. My expertise lies in crafting robust and scalable SaaS-based architectures on the Amazon AWS platform.</p>
+    </div>
+    <Buttons/>
+</header>
+<style>
+    header {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-top: 5rem;
+    }
+    .description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2rem;
+        max-width: 600px;
+        font-family: 'poppins', sans-serif;
+    }
+    h1{
+        font-size: 3rem;
+        color:var(--principal-text);
+        margin-left: 2rem;
+        text-align: center;
+    }
+    p{
+        font-size: 1.2rem;
+        color: var(--secondary-text);
+        text-align: center;
+        margin-top: 1rem;
+    }
+    /** Text Gradient **/ 
+    .text-gradient {
+        color: #FF8661; 
+        background-image: linear-gradient(135deg, #FF8661 45%, #FF0080 68%); 
+        background-clip: text; 
+        -webkit-background-clip: text; 
+        -webkit-text-fill-color: transparent; 
+    }
+    @metamedia (max-width: 768px) {
+        h1{
+            font-size: 2rem;
+            margin-left: 0;
+        }
+        p{
+            font-size: 1rem;
+        }
+    }
+    @media (max-width: 480px) {
+        h1{
+            font-size: 1.5rem;
+            margin-left: 0;
+        }
+        p{
+            font-size: 0.8rem;
+        }
+    }
+</style>
