@@ -13,5 +13,9 @@
         }
       ]
     }
+  ],
+  "rewrites": [
+    { "source": "/lautaro_ferreyra_cv.pdf", "destination": "/Lautaro_Ferreyra_cv.pdf" },
+    { "source": "/:path*", "destination": "/:path*" }
   ]
 }
