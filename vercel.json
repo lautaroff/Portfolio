@@ -13,11 +13,5 @@
         }
       ]
     }
-  ],
-  "routes": [
-    {
-      "src": "/Lautaro_Ferreyra_cv.pdf",
-      "dest": "/Lautaro_Ferreyra_cv.pdf"
-    }
   ]
 }
