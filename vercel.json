@@ -1,0 +1,23 @@
+{
+  "headers": [
+    {
+      "source": "/(.*\\.pdf)",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/pdf"
+        },
+        {
+          "key": "Content-Disposition",
+          "value": "inline"
+        }
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "src": "/Lautaro_Ferreyra_cv.pdf",
+      "dest": "/Lautaro_Ferreyra_cv.pdf"
+    }
+  ]
+}
