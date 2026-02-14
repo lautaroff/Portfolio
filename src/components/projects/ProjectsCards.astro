@@ -1,34 +1,39 @@
 ---
-const {img ,alt, title, link} = Astro.props;
+const {img ,alt, title, links} = Astro.props;
 ---
-<a href=`${link}` target="_blank" rel="noopener noreferrer" class="CardProyect">
+<div class="CardProyect">
     <img src=`/${img}` alt={alt} class="imgProyect">
     <div class="bottom">
         <div class="text">
-            <p>click here to visit</p>
             <h4>{title}</h4>
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"/>
-        </svg>
+        <div class="links">
+            {links.map(link => (
+                <a href={link.url} target="_blank" rel="noopener noreferrer" class="link-button">
+                    {link.label}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 1 0 1z"/>
+                    </svg>
+                </a>
+            ))}
+        </div>
     </div>
-</a>
+</div>
 <style>
     .CardProyect{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 400px;
+        width: 350px;
         height: 300px;
         border-radius: 20px;
         background-color: var(--card-background);
         margin: 1rem;
-        text-decoration: none;
         color: var(--principal-text);
     }
     .imgProyect{
-        width: 400px;
+        width: 350px;
         max-height: 230px;
         object-fit: cover;
         border-radius: 20px 20px 0 0;
@@ -46,10 +51,18 @@ const {img ,alt, title, link} = Astro.props;
         flex-direction: column;
         margin-left: 1rem;
     }
-    p{
+    .links{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .link-button{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--principal-text);
         font-size: 0.8rem;
-        color: var(--secondary-text);
-        margin:0;
+        gap: 0.5rem;
     }
     h4{
         font-size: 1.2rem;
@@ -57,12 +70,10 @@ const {img ,alt, title, link} = Astro.props;
         margin:0;
         
     } 
- 
-    svg{
+    .link-button svg{
         color: var(--principal-text);
-        width: 1.5rem;
-        height: 1.5rem;
-        padding-right: 1rem;
+        width: 1rem;
+        height: 1rem;
     }
     @media (max-width: 768px) {
         .CardProyect{
@@ -75,8 +86,8 @@ const {img ,alt, title, link} = Astro.props;
         h4{
             font-size: 1rem;
         }
-        p{
-            font-size: 0.8rem;
+        .link-button{
+            font-size: 0.7rem;
         }
     }
     @media (max-width: 480px) {
@@ -87,8 +98,8 @@ const {img ,alt, title, link} = Astro.props;
         h4{
             font-size: 1rem;
         }
-        p{
-            font-size: 0.8rem;
+        .link-button{
+            font-size: 0.7rem;
         }
     }
     

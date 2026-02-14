@@ -6,8 +6,9 @@ import ProyectsCards from "./ProjectsCards.astro";
 <section class="proyects" id="proyects">
     <h3 class="text-gradient">PROYECTOS</h3>
     <div class="cards">
-        <ProyectsCards img="crobf_banner.png" alt="CROBF TECH banner" title="CROBF TECH" link="https://crobf.tech/"/>
-        <ProyectsCards img="hexabanner.jpg" alt="Hexadevs Academy banner" title="Hexadevs Academy" link="https://hexadevs.crobf.tech/"/>
+        <ProyectsCards img="crobf_banner.png" alt="CROBF TECH banner" title="CROBF TECH" links={[{label: "Visitar Sitio", url: "https://crobf.tech/"}]}/>
+        <ProyectsCards img="hexabanner.jpg" alt="Hexadevs Academy banner" title="Hexadevs Academy" links={[{label: "Visitar Sitio", url: "https://hexadevs.crobf.tech/"}]}/>
+        <ProyectsCards img="cronometro_naranja.png" alt="En Diez banner" title="En Diez" links={[{label: "Sitio Web", url: "https://endiez.com/"}, {label: "Play Store", url: "https://play.google.com/store/apps/details?id=com.endiez.app&hl=es_AR"}]}/>
     </div>
 </section>
 <style>
@@ -19,9 +20,9 @@ import ProyectsCards from "./ProjectsCards.astro";
         margin-top: 3rem;
     }
     .cards{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
         align-items: center;
         gap: 2rem;
     }
@@ -45,7 +46,7 @@ import ProyectsCards from "./ProjectsCards.astro";
             font-size: 1.5rem;
         }
         .cards{
-            flex-direction: column;
+            grid-template-columns: 1fr;
             gap: 1rem;
         }
     }
